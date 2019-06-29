@@ -1,0 +1,42 @@
+.container{
+    text-align: center;
+    margin-top: 30px;
+    height:auto;
+}
+
+.map {
+    max-width: 80%; 
+    height:500px;
+    margin: 0 auto;
+}
+
+#window{
+    width: 400px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: solid 3px #ffc107;
+    padding: 10px;
+}
+
+.name :hover{
+    color: red;
+}
+
+.date{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.com{
+    font-size: 15px;
+}
+
+.pass{
+    margin-top: 15px;
+    font-size: 15px;
+}

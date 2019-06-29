@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <TITLE>思い出ＭＡＰ</TITLE>
+    <link rel="stylesheet" type="text/css" href="css/displayMap.css" media="all">
+</HEAD>
+
+<BODY>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            
+
+    <header>
+        <div class="head_title">思い出<span>ＭＡＰ</span></div>
+        <div class="username">ようこそ{{$user->name}}さん</div>
+        <nav>
+            <ul>
+                <li><a href="/MemoryMap/public/displayMap">ＭＡＰ</a></li>
+                <li><a href="/MemoryMap/public/torokuGamen">登録</a></li>
+                <li><a href="/MemoryMap/public/ichiranGamen">一覧</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="map" class="map"></div>
+    
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jk-vadOR5ZWLZjhSrCzK_J2McxzbqNM&callback=initMap"></script>
+
+    <script>
+
+        var map;
+        
+        <!--コントローラーから渡された$dataを取得 -->
+        var data = @json($data);
+        
+        <!--マーカーを複数置くため配列で定義 -->
+        var marker = [];
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 35.681236, lng: 139.767125 },
+                zoom: 12
+            });
+            
+            <!--取得したデータのレコード数分処理を繰り返す -->
+            for (var i = 0; i < data.length; i++) {
+
+              <!--マーカーを置く緯度・経度にDBの値をセットする-->
+                    markerLatLng = { lat: data[i]['ido'], lng: data[i]['keido'] };
+                    marker[i] = new google.maps.Marker({
+                    position: markerLatLng,
+                    map: map
+                });
+              
+              <!--情報ウインドウを設定するメソッドを呼出す -->
+                    attachMessage(marker[i], data[i]['place_name'], data[i]['place_comment'], data[i]['place_date'], data[i]['id']);
+            }
+        };
+        
+        /*
+        * 情報ウインドウを設定する
+        @param marker 座標
+        @param name 名前
+        @param com コメント
+        @param place_date 日付
+        *
+        */
+            function attachMessage(marker, name, com, place_date, id) {
+            
+                var pass =  "/MemoryMap/public/shosaiGamen/" + id;
+            
+                <!-- htmlタグの設定 -->
+                var contentStr = "<div id='window'><div class='name'><a href=" + pass + ">" + name +
+                    "</a></div><br><div class='date'>" + place_date + "</div><br><div class='com'>" + com + "</div></div>";
+
+                <!-- 情報ウインドウの設定 -->
+                google.maps.event.addListener(marker, 'click', function (event) {
+                    new google.maps.InfoWindow({
+                        content: contentStr
+                    }).open(marker.getMap(), marker);
+                });
+            }
+
+    </script>
+
+</BODY>
+
+</HTML>
