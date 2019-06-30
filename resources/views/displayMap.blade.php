@@ -6,14 +6,13 @@
 @endsection
 
 @section('content')
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jk-vadOR5ZWLZjhSrCzK_J2McxzbqNM&callback=initMap"></script>
+    <script>
     
     <div id="map" class="map"></div>
     
-    <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jk-vadOR5ZWLZjhSrCzK_J2McxzbqNM&callback=initMap"></script>
-
-    <script>
-
         var map;
         
         <!--コントローラーから渡された$dataを取得 -->
