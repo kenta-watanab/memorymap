@@ -55,7 +55,7 @@
         }
         
         function toShosaiGamen(id) {
-          location.href = "/MemoryMap/public/shosaiGamen/" + id ;
+          location.href = "/memorymap/public/shosaiGamen/" + id ;
         }
         
       </script>

@@ -25,7 +25,7 @@
             @endif
 
             <h3>登録して下さい</h3>
-            <form action="/MemoryMap/public/insertInfo" method="POST" enctype="multipart/form-data">
+            <form action="/memorymap/public/insertInfo" method="POST" enctype="multipart/form-data">
               {{ csrf_field() }}
                 <p class="label">出かけた場所</p>
                 <input placeholder="例）東京スカイツリー" name="name" id="name" class="in" /><br>
