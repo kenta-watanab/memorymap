@@ -1,4 +1,4 @@
-@extends('layouts.newheader')
+@extends('layouts.header')
 
 @section('css')
     <link rel="stylesheet" type="text/css" href="css/displayMap.css" media="all">
@@ -7,23 +7,7 @@
 
 @section('content')
 
-<div class="wrap">
-
-    <div class="hidden_box">
-        <label for="label1" class="label1">クリックして表示</label>
-        <input type="checkbox" id="label1"/>
-            <div class="hidden_show">
-                <nav>
-                    <ul>
-                    <li><a href="/memorymap/public/home">ＭＡＰ</a></li>
-                    <li><a href="/memorymap/public/torokuGamen">登録</a></li>
-                    <li><a href="/memorymap/public/ichiranGamen">一覧</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="map" class="map">   
-</div>
-    </div>
+     <div id="map" class="map"> 
 
 </div>
     
