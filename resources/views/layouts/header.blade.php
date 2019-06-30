@@ -27,9 +27,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="/MemoryMap/public/home">ＭＡＰ</a></li>
-                <li><a href="/MemoryMap/public/torokuGamen">登録</a></li>
-                <li><a href="/MemoryMap/public/ichiranGamen">一覧</a></li>
+                <li><a href="/memorymap/public/home">ＭＡＰ</a></li>
+                <li><a href="/memorymap/public/torokuGamen">登録</a></li>
+                <li><a href="/memorymap/public/ichiranGamen">一覧</a></li>
             </ul>
         </nav>
     </header>
