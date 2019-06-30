@@ -26,24 +26,7 @@
      </div>
      <div class="head_title">思い出<span>ＭＡＰ</span></div>
      <div class="username">ようこそ<span>{{$user->name}}</span>さん</div>
-                            
-
-    <header>
-    <div class="hidden_box">
-        <label for="label1" class="label1">クリックして表示</label>
-        <input type="checkbox" id="label1"/>
-            <div class="hidden_show">
-                <nav>
-                    <ul>
-                    <li><a href="/memorymap/public/home">ＭＡＰ</a></li>
-                    <li><a href="/memorymap/public/torokuGamen">登録</a></li>
-                    <li><a href="/memorymap/public/ichiranGamen">一覧</a></li>
-                    </ul>
-                </nav>
-            </div>
-     </div>
-    </header>
-    
+                                
     @yield('content')
 
 </BODY>
