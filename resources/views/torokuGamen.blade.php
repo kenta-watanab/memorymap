@@ -7,7 +7,7 @@
 
 @section('content')
 
-    <script async defer
+    <script>
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jk-vadOR5ZWLZjhSrCzK_J2McxzbqNM&callback=initMap">
     </script>
 
