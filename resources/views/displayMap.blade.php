@@ -7,9 +7,11 @@
 
 @section('content')
 
+<div id="container" class="container">
+
      <div id="map" class="map"> 
 
-</div>
+</div></div>
     
     <script>
     
@@ -25,7 +27,7 @@
 
             map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 35.681236, lng: 139.767125 },
-                zoom: 12
+                zoom: 15
             });
             
             <!--取得したデータのレコード数分処理を繰り返す -->
