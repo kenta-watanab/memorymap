@@ -5,10 +5,6 @@
     <META http-equiv="Content-Type" content="text/html; charset=utf-8">
     <TITLE>思い出ＭＡＰ</TITLE>
     @yield('css')
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100% }
-    </style>
 </HEAD>
 
 <BODY>
@@ -29,6 +25,7 @@
                             
 
     <header>
+    <!--
     <div class="hidden_box">
         <label for="label1" class="label1">クリックして表示</label>
         <input type="checkbox" id="label1"/>
@@ -42,6 +39,7 @@
                 </nav>
             </div>
      </div>
+     -->
     </header>
     
     @yield('content')
