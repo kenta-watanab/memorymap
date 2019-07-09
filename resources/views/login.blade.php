@@ -9,12 +9,12 @@
 
 <body>
     <h1>思い出<span>ＭＡＰ</span></h1>
-    <img src="image/map.png" alt="画像表示"><br>
+    <img src="image/map.png" alt="画像表示" class='gazou'><br>
     <form action="/MemoryMap/public/displayMap">
-        <p class="label">ID</p>
-        <input id="id" class="in" /><br>
-        <p class="label">パスワード</p>
-        <input id="pass" class="in" /><br>
+        <p >ID</p>
+        <input id="id" /><br>
+        <p >パスワード</p>
+        <input id="pass"/><br>
         <input type="submit" value="ログイン" class="btn">
     </form>
 </body>

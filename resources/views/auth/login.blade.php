@@ -3,13 +3,11 @@
 @section('content')
 <div class="container">
 <h1>思い出<span>ＭＡＰ</span></h1>
-    <img src="image/map.png" alt="画像表示"><br>
+    <img src="image/map.png" alt="画像表示" class='gazou'><br>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -68,8 +66,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
+            
     </div>
 </div>
 @endsection
