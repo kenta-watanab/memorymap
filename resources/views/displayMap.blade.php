@@ -11,6 +11,20 @@
 
      <div id="map" class="map"> 
 
+     <div class="hidden_box">
+        <label for="label1" class="label1">クリックして表示</label>
+        <input type="checkbox" id="label1"/>
+            <div class="hidden_show">
+                <nav>
+                    <ul>
+                    <li><a href="/memorymap/public/home">ＭＡＰ</a></li>
+                    <li><a href="/memorymap/public/torokuGamen">登録</a></li>
+                    <li><a href="/memorymap/public/ichiranGamen">一覧</a></li>
+                    </ul>
+                </nav>
+            </div>
+     </div>
+
 </div></div>
     
     <script>
@@ -43,6 +57,7 @@
               <!--情報ウインドウを設定するメソッドを呼出す -->
                     attachMessage(marker[i], data[i]['place_name'], data[i]['place_comment'], data[i]['place_date'], data[i]['id']);
             }
+
         };
         
         /*
