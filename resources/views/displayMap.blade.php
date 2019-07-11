@@ -42,6 +42,7 @@
             map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 35.681236, lng: 139.767125 },
                 zoom: 15,
+                mapTypeControl: false,
             });
             
             <!--取得したデータのレコード数分処理を繰り返す -->
