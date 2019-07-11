@@ -4,6 +4,8 @@
 <HEAD>
     <META http-equiv="Content-Type" content="text/html; charset=utf-8">
     <TITLE>思い出ＭＡＰ</TITLE>
+    <link rel="icon" href="image/icon16.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="image/icon.png">
     @yield('css')
 </HEAD>
 
