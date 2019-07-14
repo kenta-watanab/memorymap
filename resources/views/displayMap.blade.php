@@ -72,7 +72,7 @@
         */
             function attachMessage(marker, name, com, place_date, id) {
             
-                var pass =  "/MemoryMap/public/shosaiGamen/" + id;
+                var pass =  "/memorymap/public/shosaiGamen/" + id;
             
                 <!-- htmlタグの設定 -->
                 var contentStr = "<div id='window'><div class='name'><a href=" + pass + ">" + name +
