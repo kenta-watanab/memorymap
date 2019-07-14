@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-<h1>思い出<span>ＭＡＰ!</span></h1>
+<h1>思い出<span>ＭＡＰ!!</span></h1>
     <img src="image/map.png" alt="画像表示" class='gazou'><br>
     <div class="row justify-content-center">
         <div class="col-md-8">
