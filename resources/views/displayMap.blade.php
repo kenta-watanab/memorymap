@@ -60,6 +60,44 @@
                     attachMessage(marker[i], data[i]['place_name'], data[i]['place_comment'], data[i]['place_date'], data[i]['id']);
             }
 
+            var checkOptions = {
+        		gmap: map,
+        		id: "toroku",
+                label: "登録する",		
+                action: function(){
+        			window.location.href = "/memorymap/public/torokuGamen";
+        		}  		     		        		
+            }
+            var check1 = new checkBox(checkOptions);
+        
+            var checkOptions2 = {
+        		gmap: map,
+        		id: "ichiran",
+        		label: "一覧を見る",
+        		action: function(){
+        			window.location.href = "/memorymap/public/ichiranGamen";
+        		}        		        		
+            }
+            var check2 = new checkBox(checkOptions2);
+
+            var ddDivOptions = {
+        	    items: [check1, check2],
+        	    id: "myddOptsDiv"        		
+            }
+        
+            var dropDownDiv = new dropDownOptionsDiv(ddDivOptions);               
+                
+             var dropDownOptions = {
+        		gmap: map,
+        		name: 'メニュー',
+        		id: 'ddControl',
+        		title: 'A custom drop down select with mixed elements',
+        		position: google.maps.ControlPosition.TOP_LEFT,
+        		dropDown: dropDownDiv 
+            }
+        
+            var dropDown1 = new dropDownControl(dropDownOptions);             
+  
         };
         
         /*
@@ -85,6 +123,74 @@
                     }).open(marker.getMap(), marker);
                 });
             }
+
+            function dropDownOptionsDiv(options){
+    	        //alert(options.items[1]);
+      	        var container = document.createElement('DIV');
+      	        container.className = "dropDownOptionsDiv";
+      	        container.id = options.id;
+      	
+      	        for(i=0; i<options.items.length; i++){
+      		    //alert(options.items[i]);
+      	        	container.appendChild(options.items[i]);
+                  }      
+ 		        return container;        	
+            }
+
+            function dropDownControl(options){
+
+    	        var container = document.createElement('DIV');
+    	        container.className = 'container';
+    	  
+    	        var control = document.createElement('DIV');
+    	        control.className = 'dropDownControl';
+    	        control.innerHTML = options.name;
+    	        control.id = options.name;
+    	        var arrow = document.createElement('IMG');
+    	        arrow.className = 'dropDownArrow';
+    	        control.appendChild(arrow);	      		
+    	        container.appendChild(control);    
+                container.appendChild(options.dropDown);
+
+    	        options.gmap.controls[options.position].push(container);
+    	        google.maps.event.addDomListener(container,'click',function(){
+    		        (document.getElementById('myddOptsDiv').style.display == 'block') ? document.getElementById('myddOptsDiv').style.display = 'none' : document.getElementById('myddOptsDiv').style.display = 'block';
+    	        }) 	  
+            } 
+
+
+            function checkBox(options){
+     	        //first make the outer container
+     	        var container = document.createElement('DIV');
+   	  	        container.className = "checkboxContainer";
+   	  	
+     	        var span = document.createElement('SPAN');
+     	        span.role = "checkbox";
+     	        span.className = "checkboxSpan";
+     	        	        	
+     	        var bDiv = document.createElement('DIV');
+   	  	        bDiv.className = "blankDiv";      	  	
+   	  	        bDiv.id = options.id;
+   	  	
+   	  	        var image = document.createElement('IMG');
+   	  	        image.className = "blankImg";
+   	  	
+   	  	        var label = document.createElement('LABEL');
+                label.className = "checkboxLabel";
+   	  	        label.innerHTML = options.label;
+   	  	
+   	  	        bDiv.appendChild(image);
+   	  	        span.appendChild(bDiv);
+   	  	        container.appendChild(span);
+   	  	        container.appendChild(label);
+   	  	
+   	  	        google.maps.event.addDomListener(container,'click',function(){
+   	  		    (document.getElementById(bDiv.id).style.display == 'block') ? document.getElementById(bDiv.id).style.display = 'none' : document.getElementById(bDiv.id).style.display = 'block';
+   	  		    options.action(); 
+                })  
+
+   	  	return container;
+     }
 
     </script>
     
