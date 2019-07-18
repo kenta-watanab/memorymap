@@ -60,7 +60,7 @@
                     attachMessage(marker[i], data[i]['place_name'], data[i]['place_comment'], data[i]['place_date'], data[i]['id']);
             }
 
-            var checkOptions = {
+            var torokuOptions = {
         		gmap: map,
         		id: "toroku",
                 label: "登録する",		
@@ -68,9 +68,9 @@
         			window.location.href = "/memorymap/public/torokuGamen";
         		}  		     		        		
             }
-            var check1 = new checkBox(checkOptions);
+            var toToroku = new dropDown(torokuOptions);
         
-            var checkOptions2 = {
+            var ichiranOptions = {
         		gmap: map,
         		id: "ichiran",
         		label: "一覧を見る",
@@ -78,10 +78,10 @@
         			window.location.href = "/memorymap/public/ichiranGamen";
         		}        		        		
             }
-            var check2 = new checkBox(checkOptions2);
+            var toIchiran = new dropDown(ichiranOptions);
 
             var ddDivOptions = {
-        	    items: [check1, check2],
+        	    items: [toToroku, toIchiran],
         	    id: "myddOptsDiv"        		
             }
         
@@ -91,7 +91,6 @@
         		gmap: map,
         		name: 'メニュー',
         		id: 'ddControl',
-        		title: 'A custom drop down select with mixed elements',
         		position: google.maps.ControlPosition.TOP_LEFT,
         		dropDown: dropDownDiv 
             }
@@ -159,33 +158,15 @@
             } 
 
 
-            function checkBox(options){
+            function dropDown(options){
      	        //first make the outer container
      	        var container = document.createElement('DIV');
    	  	        container.className = "checkboxContainer";
-   	  	
-     	        var span = document.createElement('SPAN');
-     	        span.role = "checkbox";
-     	        span.className = "checkboxSpan";
-     	        	        	
-     	        var bDiv = document.createElement('DIV');
-   	  	        bDiv.className = "blankDiv";      	  	
-   	  	        bDiv.id = options.id;
-   	  	
-   	  	        var image = document.createElement('IMG');
-   	  	        image.className = "blankImg";
-   	  	
-   	  	        var label = document.createElement('LABEL');
-                label.className = "checkboxLabel";
-   	  	        label.innerHTML = options.label;
-   	  	
-   	  	        bDiv.appendChild(image);
-   	  	        span.appendChild(bDiv);
-   	  	        container.appendChild(span);
-   	  	        container.appendChild(label);
-   	  	
+                container.id = options.id;
+                container.innerHTML = options.label;
+   	  	   	  	
    	  	        google.maps.event.addDomListener(container,'click',function(){
-   	  		    (document.getElementById(bDiv.id).style.display == 'block') ? document.getElementById(bDiv.id).style.display = 'none' : document.getElementById(bDiv.id).style.display = 'block';
+   	  		    (document.getElementById(container.id).style.display == 'block') ? document.getElementById(container.id).style.display = 'none' : document.getElementById(container.id).style.display = 'block';
    	  		    options.action(); 
                 })  
 
