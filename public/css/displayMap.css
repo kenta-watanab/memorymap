@@ -54,27 +54,28 @@ body{
     padding: 10px;
     font-size:large;
     font-weight: bolder;
-    color: red;
     display:block;
-    width:100%;
+    width:200px;
     text-align:center;
-    border:2px solid;
-    border-color: black;
-    background-color:white;
+    background-color:red;
+    color:white;
+    box-shadow:0 3px 6px rgba(0, 0, 0), 0 1px 2px rgba(0, 0, 0);
+    border-radius:15px; 
 }
 
 .dropDownOptionsDiv{
+    margin-top:10px;
     margin-left:10px;
     padding: 10px;
     background-color: whitesmoke;
     font-size:large;
-    border-top: 0px;
-    border-left: 2px solid;
-    border-right: 2px solid;
-    border-bottom: 2px solid;
     width:100%;
+    display: none;
+    box-shadow:0 3px 6px rgba(0, 0, 0), 0 1px 2px rgba(0, 0, 0);
+    border-radius:15px; 
 }
 
 .checkboxContainer{
     text-align: left;
+    padding: 10px;
 }
