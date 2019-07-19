@@ -11,20 +11,6 @@
 
      <div id="map" class="map"> 
 
-     <div class="hidden_box">
-        <label for="label1" class="label1">クリックして表示</label>
-        <input type="checkbox" id="label1"/>
-            <div class="hidden_show">
-                <nav>
-                    <ul>
-                    <li><a href="/memorymap/public/home">ＭＡＰ</a></li>
-                    <li><a href="/memorymap/public/torokuGamen">登録</a></li>
-                    <li><a href="/memorymap/public/ichiranGamen">一覧</a></li>
-                    </ul>
-                </nav>
-            </div>
-     </div>
-
 </div></div>
     
     <script>
@@ -60,42 +46,33 @@
                     attachMessage(marker[i], data[i]['place_name'], data[i]['place_comment'], data[i]['place_date'], data[i]['id']);
             }
 
-            var torokuOptions = {
-        		gmap: map,
-        		id: "toroku",
-                label: "登録する",		
-                action: function(){
-        			window.location.href = "/memorymap/public/torokuGamen";
-        		}  		     		        		
-            }
-            var toToroku = new dropDown(torokuOptions);
-        
-            var ichiranOptions = {
-        		gmap: map,
-        		id: "ichiran",
-        		label: "一覧を見る",
-        		action: function(){
-        			window.location.href = "/memorymap/public/ichiranGamen";
-        		}        		        		
-            }
-            var toIchiran = new dropDown(ichiranOptions);
+            var dropDownMenuUl = document.createElement('ul');
+                dropDownMenuUl.className = 'dropmenu'
+                dropDownMenuUl.id = 'dropmenu';
 
-            var ddDivOptions = {
-        	    items: [toToroku, toIchiran],
-        	    id: "myddOptsDiv"        		
-            }
-        
-            var dropDownDiv = new dropDownOptionsDiv(ddDivOptions);               
+            var dropDownMenuLi = document.createElement('li');
+                dropDownMenuLi.innerHTML = 'メニュー';
+                dropDownMenuLi.className = 'dropmenu_li'
                 
-             var dropDownOptions = {
-        		gmap: map,
-        		name: 'メニュー',
-        		id: 'ddControl',
-        		position: google.maps.ControlPosition.TOP_LEFT,
-        		dropDown: dropDownDiv 
-            }
-        
-            var dropDown1 = new dropDownControl(dropDownOptions);             
+            var dropDownListUl = document.createElement('ul');
+                dropDownListUl.className = 'droplist_ul'
+
+            var dropDownListLi = document.createElement('li');
+                dropDownListLi.className = 'droplist_li'
+                var linkUrl = '/memorymap/public/torokuGamen';
+                dropDownListLi.innerHTML = '<a href="' + linkUrl + '">' + '登録をする' + '</a>';
+            
+            var dropDownListLi2 = document.createElement('li');
+                dropDownListLi2.className = 'droplist_li'
+                var linkUrl = '/memorymap/public/ichiranGamen';
+                dropDownListLi2.innerHTML = '<a href="' + linkUrl + '">' + '一覧を見る' + '</a>';
+
+            dropDownListUl.appendChild(dropDownListLi);
+            dropDownListUl.appendChild(dropDownListLi2);
+            dropDownMenuLi.appendChild(dropDownListUl);
+            dropDownMenuUl.appendChild(dropDownMenuLi);
+           
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(dropDownMenuUl);
   
         };
         
@@ -122,56 +99,6 @@
                     }).open(marker.getMap(), marker);
                 });
             }
-
-            function dropDownOptionsDiv(options){
-    	        //alert(options.items[1]);
-      	        var container = document.createElement('DIV');
-      	        container.className = "dropDownOptionsDiv";
-      	        container.id = options.id;
-      	
-      	        for(i=0; i<options.items.length; i++){
-      		    //alert(options.items[i]);
-      	        	container.appendChild(options.items[i]);
-                  }      
- 		        return container;        	
-            }
-
-            function dropDownControl(options){
-
-    	        var container = document.createElement('DIV');
-    	        container.className = 'container';
-    	  
-    	        var control = document.createElement('DIV');
-    	        control.className = 'dropDownControl';
-    	        control.innerHTML = options.name;
-    	        control.id = options.name;
-    	        var arrow = document.createElement('IMG');
-    	        arrow.className = 'dropDownArrow';
-    	        control.appendChild(arrow);	      		
-    	        container.appendChild(control);    
-                container.appendChild(options.dropDown);
-
-    	        options.gmap.controls[options.position].push(container);
-    	        google.maps.event.addDomListener(container,'click',function(){
-    		        (document.getElementById('myddOptsDiv').style.display == 'block') ? document.getElementById('myddOptsDiv').style.display = 'none' : document.getElementById('myddOptsDiv').style.display = 'block';
-    	        }) 	  
-            } 
-
-
-            function dropDown(options){
-     	        //first make the outer container
-     	        var container = document.createElement('DIV');
-   	  	        container.className = "checkboxContainer";
-                container.id = options.id;
-                container.innerHTML = options.label;
-   	  	   	  	
-   	  	        google.maps.event.addDomListener(container,'click',function(){
-   	  		    (document.getElementById(container.id).style.display == 'block') ? document.getElementById(container.id).style.display = 'none' : document.getElementById(container.id).style.display = 'block';
-   	  		    options.action(); 
-                })  
-
-   	  	return container;
-     }
 
     </script>
     
