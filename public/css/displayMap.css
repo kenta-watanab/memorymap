@@ -72,7 +72,7 @@ body{
     position: relative;
     width: 10%;
     float: left;
-    margin:  10px 10px 10px 10px;
+    margin:  30px 10px 10px 30px;
     padding: 20px 0px 20px 0px;
     border-radius: 40px;
     text-align: center;
@@ -99,7 +99,8 @@ body{
     left: 0;
     margin-top: 30px;
     padding: 0;
-    width: 200%;
+    width: 300%;
+    border-radius: 20px;
 }
 
 .droplist_li{
@@ -107,8 +108,7 @@ body{
 }
 
 .droplist_li a{
-    padding: 30px 30px;
-    border: 1px solid black;
+    padding: 40px 40px;
     background: white;
     text-align: left;
     font-size: large;
@@ -117,28 +117,31 @@ body{
 }
 
 .dropmenu_li:hover > a{
-    background: whitesmoke;
+    background:lightgray;
 }
 
 .dropmenu_li a:hover{
-    background: whitesmoke;
+    background: lightgray;
 }
 
 #dropmenu li ul{
-           visibility: hidden;
-           opacity: 0;
-           transition: 0s;
-      }
-       #dropmenu li:hover ul{
-           visibility: visible;
-           opacity: 1;
-      }
-      #dropmenu li ul li a{
-          visibility: hidden;
-          opacity: 0;
-          transition: .5s;
-      }
-      #dropmenu li:hover ul li a{
-          visibility: visible;
-          opacity: 1;
-      }
+    visibility: hidden;
+    opacity: 0;
+    transition: 0s;
+}
+
+#dropmenu li:hover ul{
+    visibility: visible;
+    opacity: 1;
+}
+
+#dropmenu li ul li a{
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+      
+#dropmenu li:hover ul li a{
+    visibility: visible;
+    opacity: 1;
+}
