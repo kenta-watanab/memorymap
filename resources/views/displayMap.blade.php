@@ -29,7 +29,6 @@
                 center: { lat: 35.681236, lng: 139.767125 },
                 zoom: 15,
                 mapTypeControl: false,
-                fullscreenControl: true,
             });
             
             <!--取得したデータのレコード数分処理を繰り返す -->
@@ -45,6 +44,9 @@
               <!--情報ウインドウを設定するメソッドを呼出す -->
                     attachMessage(marker[i], data[i]['place_name'], data[i]['place_comment'], data[i]['place_date'], data[i]['id']);
             }
+
+            var menu = document.createElement('DIV');
+                menu.className = 'menu'
 
             var dropDownMenuUl = document.createElement('ul');
                 dropDownMenuUl.className = 'dropmenu'
@@ -71,8 +73,9 @@
             dropDownListUl.appendChild(dropDownListLi2);
             dropDownMenuLi.appendChild(dropDownListUl);
             dropDownMenuUl.appendChild(dropDownMenuLi);
+            menu.appendChild(dropDownMenuUl);
            
-            map.controls[google.maps.ControlPosition.TOP_LEFT].push(dropDownMenuUl);
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(menu);
   
         };
         
