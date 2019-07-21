@@ -1,16 +1,11 @@
-<!DOCTYPE HTML>
-<HTML>
+@extends('layouts.header')
 
-<HEAD>
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <TITLE>思い出ＭＡＰ</TITLE>
-    <link rel="icon" href="image/icon16.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="image/icon.png">
+@section('css')
     <link rel="stylesheet" type="text/css" href="css/displayMap.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/header.css" media="all">
-</HEAD>
+@endsection
 
-<BODY>
+@section('content')
 
 <div id="container" class="container">
 
@@ -112,7 +107,5 @@
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jk-vadOR5ZWLZjhSrCzK_J2McxzbqNM&callback=initMap">
     </script>
-    
-</BODY>
 
-</HTML>
+@endsection
