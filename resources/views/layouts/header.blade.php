@@ -4,47 +4,59 @@
 <HEAD>
     <META http-equiv="Content-Type" content="text/html; charset=utf-8">
     <META name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <META name="csrf-token" content="{{ csrf_token() }}">
     <TITLE>思い出ＭＡＰ</TITLE>
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="icon" href="image/icon16.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="image/icon.png">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/login.css" media="all">
     @yield('css')
 </HEAD>
 
 <BODY>
 
-     <div class="logout">
-     <a href="{{ route('logout') }}"
-     onclick="event.preventDefault();
-     document.getElementById('logout-form').submit();">
-     {{ __('Logout') }}
-     </a>
+<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+    <div class="container">
 
-     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-     @csrf
-     </form>
-     </div>
-     <div class="head_title">思い出<span>ＭＡＰ</span></div>
-     <div class="username">ようこそ<span>{{$user->name}}</span>さん</div>
-                            
+    <div class="head_title">思い出<span>ＭＡＰ</span></div>
 
-    <header>
-    <!--
-    <div class="hidden_box">
-        <label for="label1" class="label1">クリックして表示</label>
-        <input type="checkbox" id="label1"/>
-            <div class="hidden_show">
-                <nav>
-                    <ul>
-                    <li><a href="/memorymap/public/home">ＭＡＰ</a></li>
-                    <li><a href="/memorymap/public/torokuGamen">登録</a></li>
-                    <li><a href="/memorymap/public/ichiranGamen">一覧</a></li>
-                    </ul>
-                </nav>
-            </div>
-     </div>
-     -->
-    </header>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div id="navbarSupportedContent" class="navbar-collapse collapse" >
+
+        <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <ul class="navbar-nav ml-auto"> 
+                <li class="nav-item">
+                    <a href="/memorymap/public/home" class="nav-link">
+                        HOME
+                    </a>
+                </li> 
+                <li class="nav-item">
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"
+                         class="nav-link">
+                        {{ __('LOGOUT') }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+    </form>
+
+</div>
     
+    
+    <div class="username">ようこそ<span>{{$user->name}}</span>さん</div>
+                                
     @yield('content')
 
 </BODY>
