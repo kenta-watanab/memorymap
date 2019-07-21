@@ -12,11 +12,9 @@
 
 <BODY>
 
-<div id="container" class="container">
+<div id="map" class="map"> 
 
-     <div id="map" class="map"> 
-
-</div></div>
+</div>
     
     <script>
     
@@ -34,6 +32,10 @@
                 center: { lat: 35.681236, lng: 139.767125 },
                 zoom: 15,
                 mapTypeControl: false,
+                fullscreenControl: true,
+                fullscreenControlOptions: { //全画面表示コントロール
+                position: google.maps.ControlPosition.TOP_RIGHT,
+                },
             });
             
             <!--取得したデータのレコード数分処理を繰り返す -->
@@ -112,7 +114,7 @@
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jk-vadOR5ZWLZjhSrCzK_J2McxzbqNM&callback=initMap">
     </script>
-    
+
 </BODY>
 
 </HTML>
