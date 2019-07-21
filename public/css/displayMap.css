@@ -1,5 +1,5 @@
 html{
-    height: 100%;
+    height: 85%;
 }
 
 body{
@@ -13,21 +13,22 @@ body{
 
 .map {
     width: 100%; 
-    height:100%;
+    height:90%;
     margin: 0 auto;
 }
 
 #window{
-    width: 400px;
+    width: 100%;
     text-align: center;
     margin-bottom: 15px;
 }
 
 .name{
+    color: black;
+    width: 100%;
     font-size: 20px;
     font-weight: bold;
     border-bottom: solid 3px #ffc107;
-    padding: 10px;
 }
 
 .name :hover{
@@ -37,10 +38,12 @@ body{
 .date{
     margin-bottom: 10px;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .com{
     font-size: 15px;
+    font-weight: bold;
 }
 
 .pass{
@@ -64,10 +67,9 @@ body{
     background-color: red;
     color:white;
     position: relative;
-    width: 10%;
     float: left;
-    margin:  30px 10px 10px 30px;
-    padding: 20px 0px 20px 0px;
+    margin:  5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
     border-radius: 40px;
     text-align: center;
     font-size: large;
@@ -93,7 +95,7 @@ body{
     left: 0;
     margin-top: 30px;
     padding: 0;
-    width: 300%;
+    width: 280%;
     border-radius: 20px;
 }
 

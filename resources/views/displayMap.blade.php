@@ -1,20 +1,17 @@
-<!DOCTYPE HTML>
-<HTML>
+@extends('layouts.header')
 
-<HEAD>
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <TITLE>思い出ＭＡＰ</TITLE>
-    <link rel="icon" href="image/icon16.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="image/icon.png">
+@section('css')
     <link rel="stylesheet" type="text/css" href="css/displayMap.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/header.css" media="all">
-</HEAD>
+@endsection
 
-<BODY>
+@section('content')
 
-<div id="map" class="map"> 
+<div id="container" class="container">
 
-</div>
+     <div id="map" class="map"> 
+
+</div></div>
     
     <script>
     
@@ -30,12 +27,8 @@
 
             map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 35.681236, lng: 139.767125 },
-                zoom: 15,
+                zoom: 10,
                 mapTypeControl: false,
-                fullscreenControl: true,
-                fullscreenControlOptions: { //全画面表示コントロール
-                position: google.maps.ControlPosition.TOP_RIGHT,
-                },
             });
             
             <!--取得したデータのレコード数分処理を繰り返す -->
@@ -115,6 +108,4 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jk-vadOR5ZWLZjhSrCzK_J2McxzbqNM&callback=initMap">
     </script>
 
-</BODY>
-
-</HTML>
+@endsection

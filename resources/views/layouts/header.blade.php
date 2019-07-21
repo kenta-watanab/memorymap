@@ -3,6 +3,7 @@
 
 <HEAD>
     <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META name="viewport" content="initial-scale=1.0, user-scalable=no">
     <TITLE>思い出ＭＡＰ</TITLE>
     <link rel="icon" href="image/icon16.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="image/icon.png">

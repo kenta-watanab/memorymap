@@ -3,6 +3,7 @@
 
 <HEAD>
     <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META name="viewport" content="initial-scale=1.0, user-scalable=no">
     <TITLE>思い出ＭＡＰ</TITLE>
     @yield('css')
     <style type="text/css">
