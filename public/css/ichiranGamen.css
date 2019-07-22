@@ -1,8 +1,3 @@
-.container{
-  text-align: center;
-  margin-top: 30px;
- }
-
  .message{
    background-color: #F8E750;
    width:50%;
@@ -11,7 +6,7 @@
  }
 
  table {
-   width: 50%;
+   width: 90%;
    margin: auto;
    font-weight: bold;
    border-collapse:  collapse; /* セルの線を重ねる */
