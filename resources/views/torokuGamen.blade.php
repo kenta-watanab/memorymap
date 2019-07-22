@@ -21,7 +21,11 @@
             @endif
 
             @if (Session::has('message'))
-              <p class="message">{{ session('message') }}を登録しました</p>
+            <script>
+                window.onload = function() {
+                    alert("登録されました");
+                };
+            </script>
             @endif
 
             <h3>登録して下さい</h3>
@@ -30,7 +34,7 @@
                 <p class="label">出かけた場所</p>
                 <input placeholder="例）東京スカイツリー" name="name" id="name" class="in" /><br>
 
-                <input type="button" onClick="attrLatLngFromAddress()" value="検索する" class="btn2">
+                <input type="button" onClick="attrLatLngFromAddress()" value="検索する" class="btn">
 
                 <div id="map" class="map"></div>
 

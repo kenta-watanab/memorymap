@@ -7,32 +7,25 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="inline">
+    <div class="b_container">
 
             <h3>{{ $data[0]['place_name'] }}</h3>
             
-            <div id ='aaa'>
-                <table>
-                  <tr>
-                    <td><div id="map" class="map"></div></td>
-                    <td><img src="{{$path}}" class="file"></td>
-                  </tr>
-                </table>
+            <div id="map" class="map">
+            </div>
+            <div>
+              <img src="{{$path}}" class="file">
             </div>
                 
-                <div id="info">
-                <table>
-                  <tr class="border">
-                    <td class="table-title">出かけた日</td>
-                    <td class="table-naiyo">{{ $data[0]['place_date'] }}</td>
-                  </tr>
-                  <tr class="border">
-                    <td class="table-title">コメント</td>
-                    <td class="table-naiyo">{{ $data[0]['place_comment'] }}</td>
-                  </tr>
-                </table>
-                </div>
+            <div id="info">
+
+              <div class="title">出かけた日</div>
+              <div class="naiyo">{{ $data[0]['place_date'] }}</div>
+
+              <div class="title">コメント</div>
+              <div class="naiyo">{{ $data[0]['place_comment'] }}</div>
+
+            </div>
                 
                 <form action="/memorymap/public/henshuGamen" method="POST">
                 {{ csrf_field() }}
@@ -45,8 +38,6 @@
                     <input type="text" value={{ $data[0]['id'] }} name="id" class="hidden" />
                     <input type="submit" value="削除" class="deletebtn">
                 </form>
-
-        </div>
     </div>
 
     <script>
