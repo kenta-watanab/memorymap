@@ -17,9 +17,14 @@
 <BODY>
 
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-    <div class="container">
+   
+<div class="container">
 
-    <div class="head_title">思い出<span>ＭＡＰ</span></div>
+    <div class="head_title">
+        <a class = 'head_title_a' href="/memorymap/public/home" >
+            思い出<span>ＭＡＰ</span>
+        </a>
+    </div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
         <span class="navbar-toggler-icon"></span>
@@ -32,7 +37,17 @@
         <ul class="navbar-nav ml-auto"> 
                 <li class="nav-item">
                     <a href="/memorymap/public/home" class="nav-link">
-                        HOME
+                        マップを見る
+                    </a>
+                </li> 
+                <li class="nav-item">
+                    <a href="/memorymap/public/torokuGamen" class="nav-link">
+                        思い出を増やす
+                    </a>
+                </li> 
+                <li class="nav-item">
+                    <a href="/memorymap/public/ichiranGamen" class="nav-link">
+                        思い出を振り返る
                     </a>
                 </li> 
                 <li class="nav-item">
@@ -40,12 +55,13 @@
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();"
                          class="nav-link">
-                        {{ __('LOGOUT') }}
+                        {{ __('ログアウト') }}
                     </a>
                 </li>
             </ul>
         </div>
     </div>
+    <div class="username">ようこそ<span>{{$user->name}}</span>さん</div>
 </nav>
 
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -55,7 +71,7 @@
 </div>
     
     
-    <div class="username">ようこそ<span>{{$user->name}}</span>さん</div>
+    
                                 
     @yield('content')
 

@@ -2,25 +2,29 @@
     font-size: 24px;
     font-weight: bold;
    }
+
+   .head_title_a{
+    text-decoration:none;
+    color:black;
+   }
+
+   .head_title_a:hover{
+    text-decoration:none;
+    color:black;
+   }
    
-   span{
-    color:red;
-   }
+span{
+  color:red;
+}
 
-   .logout{
-       text-align: right;
-   }
-
-   .username{
-     font-weight: bold;
-     text-align: right;
-     width: 90%;
-   }
+.username{
+  font-weight: bold;
+  text-align: right;
+}
    
    nav{
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
    }
    nav ul{
     display: table;
@@ -30,8 +34,6 @@
    }
    nav ul li{
     display: table-cell;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
    }
    nav ul li a{
     display: block;
