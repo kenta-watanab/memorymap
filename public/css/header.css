@@ -1,59 +1,65 @@
 .head_title{
-    font-size: 24px;
-    font-weight: bold;
-   }
+  font-size: 24px;
+  font-weight: bold;
+}
 
-   .head_title_a{
-    text-decoration:none;
-    color:black;
-   }
+.head_title_a{
+  text-decoration:none;
+  color:black;
+}
 
-   .head_title_a:hover{
-    text-decoration:none;
-    color:black;
-   }
+.head_title_a:hover{
+  text-decoration:none;
+  color:black;
+}
    
 span{
   color:red;
 }
 
 .username{
-  font-weight: bold;
-  text-align: right;
+  color: white;
+  background-color: hotpink;
+  padding: 3px;
+  border-radius: 3px;
 }
    
-   nav{
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-   }
-   nav ul{
-    display: table;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-   }
-   nav ul li{
-    display: table-cell;
-   }
-   nav ul li a{
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    text-decoration: none;
-    color: #aaa;
-   }
-   nav ul li a:hover{
-    background-color:#F8E750;
-   }
-   nav ul li.current{
-    font-weight: bold;
-   }
-   nav ul li.current a{
-    border-bottom: 5px solid #00B0F0;
-    color: #00B0F0;
-   }
+nav{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: lightpink;
+  box-shadow: 0 2px 4px rgba(0,0,0,.04)
+}
 
-   /*全体*/
+nav ul{
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li{
+  display: table-cell;
+}
+
+nav ul li a{
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li.current{
+  font-weight: bold;
+}
+
+nav ul li.current a{
+  border-bottom: 5px solid #00B0F0;
+  color: #00B0F0;
+}
+
+/*全体*/
 .hidden_box {
   margin: 2em 0;/*前後の余白*/
   padding: 0;

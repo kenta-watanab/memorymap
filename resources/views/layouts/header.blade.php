@@ -11,18 +11,19 @@
     <link rel="apple-touch-icon" href="image/icon.png">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/login.css" media="all">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css" media="all">
     @yield('css')
 </HEAD>
 
 <BODY>
 
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<nav class="navbar navbar-expand-md navbar-light">
    
 <div class="container">
 
     <div class="head_title">
-        <a class = 'head_title_a' href="/memorymap/public/home" >
-            思い出<span>ＭＡＰ</span>
+        <a class = 'head_title_a' href="/memorymap/public/home">
+        <i class="fas fa-map-marked-alt" style="margin-right:5px;"></i>思い出<span>ＭＡＰ</span>
         </a>
     </div>
 
@@ -37,17 +38,17 @@
         <ul class="navbar-nav ml-auto"> 
                 <li class="nav-item">
                     <a href="/memorymap/public/home" class="nav-link">
-                        マップを見る
+                        マップを見る<i class="fas fa-angle-right"></i>
                     </a>
                 </li> 
                 <li class="nav-item">
                     <a href="/memorymap/public/torokuGamen" class="nav-link">
-                        思い出を増やす
+                        思い出を増やす<i class="fas fa-angle-right"></i>
                     </a>
                 </li> 
                 <li class="nav-item">
                     <a href="/memorymap/public/ichiranGamen" class="nav-link">
-                        思い出を振り返る
+                        思い出を振り返る<i class="fas fa-angle-right"></i>
                     </a>
                 </li> 
                 <li class="nav-item">
@@ -55,13 +56,13 @@
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();"
                          class="nav-link">
-                        {{ __('ログアウト') }}
+                        {{ __('ログアウト') }}<i class="fas fa-angle-right"></i>
                     </a>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="username">ようこそ<span>{{$user->name}}</span>さん</div>
+    <div class="username">{{$user->name}}</div>
 </nav>
 
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

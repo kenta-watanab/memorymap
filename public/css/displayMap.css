@@ -1,19 +1,19 @@
 html{
-    height: 90%;
+    height: 100%;
 }
 
 body{
     height: 100%;
 }
 
-.container{
+.map-container{
     text-align: center;
     height:100%;
 }
 
 .map {
     width: 100%; 
-    height:90%;
+    height:100%;
     margin: 0 auto;
 }
 
@@ -28,11 +28,11 @@ body{
     width: 100%;
     font-size: 20px;
     font-weight: bold;
-    border-bottom: solid 3px #ffc107;
+    border-bottom: solid 3px lightpink;
 }
 
 .name :hover{
-    color: red;
+    color:pink;
 }
 
 .date{
