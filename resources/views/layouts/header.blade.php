@@ -62,7 +62,6 @@
             </ul>
         </div>
     </div>
-    <div class="username">{{$user->name}}</div>
 </nav>
 
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
