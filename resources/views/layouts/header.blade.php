@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="image/icon.png">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/login.css" media="all">
-    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/memorymap/public/fontawesome/css/all.css" media="all">
     @yield('css')
 </HEAD>
 
