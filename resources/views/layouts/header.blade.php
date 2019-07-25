@@ -5,7 +5,7 @@
     <META http-equiv="Content-Type" content="text/html; charset=utf-8">
     <META name="viewport" content="initial-scale=1.0, user-scalable=no">
     <META name="csrf-token" content="{{ csrf_token() }}">
-    <TITLE>思い出ＭＡＰ</TITLE>
+    <TITLE>ＭｅｍｏｒｙＭａｐ</TITLE>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="icon" href="image/icon16.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="image/icon.png">
@@ -23,7 +23,7 @@
 
     <div class="head_title">
         <a class = 'head_title_a' href="/memorymap/public/home">
-        <i class="fas fa-map-marked-alt" style="margin-right:5px;"></i>思い出<span>ＭＡＰ</span>
+        <i class="fas fa-map-marked-alt" style="margin-right:5px;"></i>Ｍｅｍｏｒｙ<span>Ｍａｐ</span>
         </a>
     </div>
 
