@@ -16,18 +16,11 @@
 span{
   color:red;
 }
-
-.username{
-  color: white;
-  background-color: hotpink;
-  padding: 3px;
-  border-radius: 3px;
-}
    
 nav{
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: lightpink;
+  background-color: lightcyan;
   box-shadow: 0 2px 4px rgba(0,0,0,.04)
 }
 

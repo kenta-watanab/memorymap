@@ -7,15 +7,14 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="inline">
+    <div class="b_container">
 
             @if (count($errors) > 0)
                 <div>
                     
-                        @foreach ($errors->all() as $error)
-                            <p class="error_message">{{ $error }}</p>
-                        @endforeach
+                    @foreach ($errors->all() as $error)
+                        <p class="error_message">{{ $error }}</p>
+                    @endforeach
                     
                 </div>
             @endif
@@ -28,13 +27,12 @@
             </script>
             @endif
 
-            <h3>登録して下さい</h3>
             <form action="/memorymap/public/insertInfo" method="POST" enctype="multipart/form-data">
               {{ csrf_field() }}
                 <p class="label">出かけた場所</p>
                 <input placeholder="例）東京スカイツリー" name="name" id="name" class="in" /><br>
 
-                <input type="button" onClick="attrLatLngFromAddress()" value="検索する" class="btn">
+                <input type="button" onClick="attrLatLngFromAddress()" value="&#xf689; 検索" class="btn fas">
 
                 <div id="map" class="map"></div>
 
@@ -57,7 +55,6 @@
 
             </form>
 
-        </div>
     </div>
 
     <script>
