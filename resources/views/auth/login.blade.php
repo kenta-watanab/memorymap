@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-<h1>思い出<span>ＭＡＰ</span></h1>
-    <img src="image/map.png" alt="画像表示" class='gazou'><br>
+
+<h1>Ｍｅｍｏｒｙ<br><span>Ｍａｐ</span></h1>
     <div class="row justify-content-center">
         <div class="col-md-8">
 
@@ -57,6 +56,10 @@
                                     {{ __('Login') }}
                                 </button>
 
+                                <div>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('新規ID作成') }}</a>
+</div>
+
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
@@ -67,6 +70,6 @@
                     </form>
                 </div>
             
-    </div>
+
 </div>
 @endsection
