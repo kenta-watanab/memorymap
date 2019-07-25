@@ -51,7 +51,7 @@
                 <p class="label">写真</p>
                 <input type="file" name="file" class="in" /><br>
 
-                <input type="submit" value="送信" class="btn">
+                <input type="submit" value="&#xf152; 送信" class="btn marginbottom far">
 
             </form>
 

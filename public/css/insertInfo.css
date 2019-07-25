@@ -61,7 +61,7 @@
 
 .map{
  margin:auto;
- width:50%; 
+ width:70%; 
  height:200px;
 }
 
@@ -82,4 +82,8 @@
   font-weight: bold;
   border: solid 2px #494949;/*���F*/
   width: 500px;
+}
+
+.marginbottom{
+  margin-bottom: 100px;
 }
