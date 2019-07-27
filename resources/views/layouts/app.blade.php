@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon" href="image/icon.png">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="app">
         @yield('content')
     </div>
 </body>
