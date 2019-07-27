@@ -31,6 +31,7 @@ body{
 }
 
 .newBtn{
+  color: white;
   width: 110px;
   margin: 10px auto auto auto;
   border-radius: 5px;
