@@ -10,26 +10,16 @@
     <div class="container">
       <div class="inline">
 
-     @if (Session::has('message'))
-      <p class="message">{{ session('message') }}</p>
-     @endif
-
       <table>
       
-      <thead>
-        <tr>
-          <th class='hidden'></th>
-          <th >出かけた日</th>
-          <th >出かけた場所</th>
-        </tr>
-      </thead>
       <tbody>
-        
+       
       <script>
       
       
         <!--コントローラーから渡された$dataを取得 -->
         var data = @json($data);
+        var images = @json($images);
         
         
         for (var i = 0; i < data.length; i++) {
@@ -50,6 +40,12 @@
                  document.write("<td>");
                  document.write(data[i]['place_name']);
                  document.write("</td>");
+
+                 document.write("<td>");
+                 document.write("<img src=");
+                 document.write(images[i]);
+                 document.write(" class='file'>");
+                 document.write("</td>");
                  
                  document.write("</tr>")
         }
@@ -57,7 +53,7 @@
         function toShosaiGamen(id) {
           location.href = "/memorymap/public/shosaiGamen/" + id ;
         }
-        
+
       </script>
 
       </tbody>

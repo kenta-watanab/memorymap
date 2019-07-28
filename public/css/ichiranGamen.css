@@ -40,3 +40,7 @@ tr:nth-child(odd):hover {
 .hidden{
   display: none;
 }
+
+.file{
+  width: 30%;
+ }

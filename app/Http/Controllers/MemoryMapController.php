@@ -8,6 +8,7 @@ use App\gaishutsu_kiroku;
 use Intervention\Image\Facades\Image;
 use Storage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class MemoryMapController extends Controller
 {
@@ -116,7 +117,20 @@ class MemoryMapController extends Controller
         //インスタンス化
         $data = gaishutsu_kiroku::where('user_id', $userid)->get();
 
-        return view('ichiranGamen', ['data' => $data,'user' => $user]);
+        $array_count = count($data);
+
+        $images = array();
+        $images = [];
+        
+        for ($cnt = 0; $cnt < $array_count; $cnt++){
+
+            $path = "/MemoryMap/public/image/noimage.png";
+            if ($data[$cnt]['file_name'] != null){
+                $path = Storage::disk('s3')->url($data[$cnt]['file_name']);
+            }
+         $images[] = $path;
+        }
+        return view('ichiranGamen', ['data' => $data,'user' => $user],compact('images'));
     }
     
     // 詳細画面を返却する
