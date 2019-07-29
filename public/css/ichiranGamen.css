@@ -1,43 +1,9 @@
- .message {
-   background-color: #F8E750;
-   width: 50%;
-   margin: auto;
-   padding: 10px;
- }
-
- table {
-   width: 90%;
-   margin: auto;
-   font-weight: bold;
-   border-collapse: collapse;
-   /* セルの線を重ねる */
-   table-layout: fixed;
-   /* セルの幅計算指定 */
- }
-
- th {
-   background-color: ghostwhite;
-   border-bottom: solid 3px #ffc107;
-   font-size: 20px;
-   padding: 10px;
- }
-
- tr:hover {
-   background-color: #ffa;
- }
-
- tr:nth-child(odd) {
-   background: ghostwhite;
- }
-
- tr:nth-child(odd):hover {
-   background: #ffa;
- }
-
- .border {
-   height: 100px;
-   border: 1px solid #ccc;
- }
+.b_container {
+  width:100%;
+  position: relative;
+  top: 70px;
+  margin: auto;
+}
 
  .hidden {
    display: none;
@@ -46,3 +12,8 @@
  .file {
    width: 30%;
  }
+
+ .list{
+   margin: 10px;
+ }
+
