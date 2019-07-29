@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,9 +24,11 @@
     <link rel="icon" href="image/icon16.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="image/icon.png">
 </head>
+
 <body>
     <div id="app" class="app">
         @yield('content')
     </div>
 </body>
+
 </html>

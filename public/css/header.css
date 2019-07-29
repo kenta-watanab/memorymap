@@ -1,41 +1,41 @@
-.head_title{
+.head_title {
   font-size: 24px;
   font-weight: bold;
 }
 
-.head_title_a{
-  text-decoration:none;
-  color:black;
+.head_title_a {
+  text-decoration: none;
+  color: black;
 }
 
-.head_title_a:hover{
-  text-decoration:none;
-  color:black;
+.head_title_a:hover {
+  text-decoration: none;
+  color: black;
 }
-   
-span{
-  color:red;
+
+span {
+  color: red;
 }
-   
-nav{
+
+nav {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   background-color: lightcyan;
-  box-shadow: 0 2px 4px rgba(0,0,0,.04)
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .04)
 }
 
-nav ul{
+nav ul {
   display: table;
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
 
-nav ul li{
+nav ul li {
   display: table-cell;
 }
 
-nav ul li a{
+nav ul li a {
   display: block;
   width: 100%;
   padding: 10px 0;
@@ -43,40 +43,46 @@ nav ul li a{
   color: black;
 }
 
-nav ul li.current{
+nav ul li.current {
   font-weight: bold;
 }
 
-nav ul li.current a{
+nav ul li.current a {
   border-bottom: 5px solid #00B0F0;
   color: #00B0F0;
 }
 
 /*全体*/
+
 .hidden_box {
-  margin: 2em 0;/*前後の余白*/
+  margin: 2em 0;
+  /*前後の余白*/
   padding: 0;
 }
 
 /*ボタン装飾*/
+
 .hidden_box label {
   padding: 15px;
   font-weight: bold;
   border: solid 2px black;
-  cursor :pointer;
+  cursor: pointer;
 }
 
 /*ボタンホバー時*/
+
 .hidden_box label:hover {
   background: #efefef;
 }
 
 /*チェックは見えなくする*/
+
 .hidden_box input {
   display: none;
 }
 
 /*中身を非表示にしておく*/
+
 .hidden_box .hidden_show {
   height: 0;
   padding: 0;
@@ -86,7 +92,8 @@ nav ul li.current a{
 }
 
 /*クリックで中身表示*/
-.hidden_box input:checked ~ .hidden_show {
+
+.hidden_box input:checked~.hidden_show {
   padding: 10px 0;
   height: auto;
   opacity: 1;
