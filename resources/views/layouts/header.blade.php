@@ -16,62 +16,60 @@
 
 <BODY>
 
-<nav class="navbar navbar-expand-md navbar-light">
-   
-<div class="container">
+    <nav class="navbar navbar-expand-md navbar-light">
 
-    <div class="head_title">
-        <a class = 'head_title_a' href="/memorymap/public/home">
-        <i class="fas fa-map-marked-alt" style="margin-right:5px;"></i>Ｍｅｍｏｒｙ<span>Ｍａｐ</span>
-        </a>
-    </div>
+        <div class="container">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-        <div id="navbarSupportedContent" class="navbar-collapse collapse" >
+            <div class="head_title">
+                <a class='head_title_a' href="/memorymap/public/home">
+                    <i class="fas fa-map-marked-alt" style="margin-right:5px;"></i>Ｍｅｍｏｒｙ<span>Ｍａｐ</span>
+                </a>
+            </div>
 
-        <ul class="navbar-nav mr-auto">
-        </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="navbar-collapse collapse">
 
-        <ul class="navbar-nav ml-auto"> 
-                <li class="nav-item">
-                    <a href="/memorymap/public/home" class="nav-link">
-                        マップを見る<i class="fas fa-angle-right"></i>
-                    </a>
-                </li> 
-                <li class="nav-item">
-                    <a href="/memorymap/public/torokuGamen" class="nav-link">
-                        思い出を増やす<i class="fas fa-angle-right"></i>
-                    </a>
-                </li> 
-                <li class="nav-item">
-                    <a href="/memorymap/public/ichiranGamen" class="nav-link">
-                        思い出を振り返る<i class="fas fa-angle-right"></i>
-                    </a>
-                </li> 
-                <li class="nav-item">
-                    <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();"
-                         class="nav-link">
-                        {{ __('ログアウト') }}<i class="fas fa-angle-right"></i>
-                    </a>
-                </li>
-            </ul>
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="/memorymap/public/home" class="nav-link">
+                            マップを見る<i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/memorymap/public/torokuGamen" class="nav-link">
+                            思い出を増やす<i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/memorymap/public/ichiranGamen" class="nav-link">
+                            思い出を振り返る<i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();" class="nav-link">
+                            {{ __('ログアウト') }}<i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-    @csrf
+        @csrf
     </form>
 
-</div>
-    
-    
-    
-                                
+    </div>
+
+
+
+
     @yield('content')
 
 </BODY>

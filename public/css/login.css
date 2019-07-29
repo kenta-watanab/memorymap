@@ -1,4 +1,4 @@
-html{
+html {
   height: 100%;
 }
 
@@ -10,27 +10,27 @@ h1 {
   text-shadow: 5px 5px 8px white
 }
 
-span{
- color:red;
+span {
+  color: red;
 }
 
-body{
+body {
   background-image: url("../image/mapb.jpg");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
 }
 
-.form{
+.form {
   width: 60%;
   margin: auto;
   text-align: center;
 }
 
-.input{
+.input {
   margin-bottom: 15px;
 }
 
-.newBtn{
+.newBtn {
   color: white;
   width: 110px;
   margin: 10px auto auto auto;
