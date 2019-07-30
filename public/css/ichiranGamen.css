@@ -17,7 +17,7 @@
  .list{
    margin-bottom: 20px;
    font-size: 20PX;
-   font-weight: bold
+   font-weight: bold;
    border-bottom: 1px solid;
  }
 
@@ -33,6 +33,7 @@
   display: inline-block;
   width :50%;
   margin-bottom: 20px;
+  text-align: center;
  }
 
  .data_erea{
