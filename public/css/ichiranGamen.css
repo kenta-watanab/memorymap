@@ -21,10 +21,10 @@
    border-bottom: 1px solid;
  }
 
- @media only screen and (max-device-width: 480px) {
+ @media only screen and (max-device-width: 600px) {
   .list {
    margin-bottom: 20px;
-   font-size: 1%;
+   font-size: 1px;
    font-weight: bold
    border-bottom: 1px solid;
   }}
