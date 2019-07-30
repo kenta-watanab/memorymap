@@ -26,12 +26,17 @@
   font-weight: bold;
   border-bottom: 1px solid;
   width: 100%;
+  margin-bottom: 0px;
+  padding: 10px;
+}
+
+.list:hover{
+  background-color: lightgray;
 }
 
 .image_erea{
  display: inline-block;
  width :100%;
- margin-bottom: 20px;
  text-align: center;
 }
 
