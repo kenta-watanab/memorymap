@@ -27,6 +27,10 @@
             var tag="<ul class ='list' onclick=" + pass + ">" 
             document.write(tag);
 
+            document.write("<div class='name'>");           
+                document.write(data[i]['place_name']);
+            document.write("</div>");
+
               document.write("<li class='image_erea'>");  
                 document.write("<img src=");
                 document.write(images[i]);
@@ -34,12 +38,7 @@
               document.write("</li>");
             
               document.write("<li class='data_erea'>");
-                document.write("<p>");
                 document.write(data[i]['place_date']);
-                document.write("</p>");
-                document.write("<p>");           
-                document.write(data[i]['place_name']);
-                document.write("</p>");
               document.write("</li>");
 
             document.write("</ul>");
