@@ -10,11 +10,33 @@
  }
 
  .file {
-   width: 30%;
+   width: 50%;
    border-radius: 10px;
  }
 
  .list{
-   margin: 10px;
+   margin-bottom: 20px;
+   font-size: 20PX;
+   font-weight: bold
+   border-bottom: 1px solid;
+ }
+
+ @media only screen and (max-device-width: 480px) {
+  .list {
+   margin-bottom: 20px;
+   font-size: 1%;
+   font-weight: bold
+   border-bottom: 1px solid;
+  }}
+
+ .image_erea{
+  display: inline-block;
+  width :50%;
+  margin-bottom: 20px;
+ }
+
+ .data_erea{
+  display: inline-block;
+  font:10px;
  }
 

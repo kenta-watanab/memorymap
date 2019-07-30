@@ -7,7 +7,7 @@ function initMap() {
     });
 
     // 取得したデータのレコード数分処理を繰り返す
-    for (var i = 0; i < data.length; i++){
+    for (var i = 0; i < data.length; i++) {
 
         // マーカーを置く緯度・経度にDBの値をセットする
         markerLatLng = { lat: data[i]['ido'], lng: data[i]['keido'] };
