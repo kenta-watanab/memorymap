@@ -15,7 +15,7 @@
 }
 
 .name{
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 5px;
   text-align: center;
@@ -26,18 +26,23 @@
   font-weight: bold;
   border-bottom: 1px solid;
   width: 100%;
+  margin-bottom: 0px;
+  padding: 10px;
+}
+
+.list:hover{
+  background-color: lightgray;
 }
 
 .image_erea{
  display: inline-block;
  width :100%;
- margin-bottom: 20px;
  text-align: center;
 }
 
 .data_erea{
  display: inline-block;
- font-size:40px;
+ font-size:20px;
  width: 100%;
  margin-left: 20px;
  text-align: center;
@@ -54,6 +59,7 @@
    font-size: 20px;
    font-weight: bold;
    margin-bottom: 5px;
+   text-align: left;
  }
 
  .list{
