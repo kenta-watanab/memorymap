@@ -24,7 +24,7 @@
  @media only screen and (max-device-width: 600px) {
   .list {
    margin-bottom: 20px;
-   font-size: 1px;
+   font-size: 10px;
    font-weight: bold
    border-bottom: 1px solid;
   }}
