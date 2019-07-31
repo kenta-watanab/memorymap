@@ -11,10 +11,11 @@
 
     <h3>{{ $data[0]['place_name'] }}</h3>
 
-    <div id="map" class="map">
-    </div>
     <div>
         <img src="{{$path}}" class="file">
+    </div>
+
+    <div id="map" class="map">
     </div>
 
     <div id="info">
@@ -30,13 +31,13 @@
     <form action="/memorymap/public/henshuGamen" method="POST">
         {{ csrf_field() }}
         <input type="text" value={{ $data[0]['id'] }} name="id" class="hidden" />
-        <input type="submit" value="編集" class="btn">
+        <input type="submit" value="&#xf044; 編集" class="btn fas fa-edit">
     </form>
 
     <form action="/memorymap/public/deleteInfo" method="POST">
         {{ csrf_field() }}
         <input type="text" value={{ $data[0]['id'] }} name="id" class="hidden" />
-        <input type="submit" value="削除" class="deletebtn">
+        <input type="submit" value="&#xf2ed; 削除" class="deletebtn marginbottom fas fa-trash-alt">
     </form>
 </div>
 
@@ -45,39 +46,24 @@
     var marker;
 
     function initMap() {
+
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {
-                lat: {
-                    {
-                        $data[0]['ido']
-                    }
-                },
-                lng: {
-                    {
-                        $data[0]['keido']
-                    }
-                }
-            },
-            zoom: 15
+        center: { lat: {{$data[0]['ido']}}, lng: {{$data[0]['keido']}} },
+        zoom: 15,
+        mapTypeControl: false,
         });
+
         markerLatLng = {
-            lat: {
-                {
-                    $data[0]['ido']
-                }
-            },
-            lng: {
-                {
-                    $data[0]['keido']
-                }
-            }
+            lat: {{$data[0]['ido']}},
+            lng: {{$data[0]['keido']}}
         };
+
         marker = new google.maps.Marker({
             position: markerLatLng,
             map: map
         });
-    }
-</script>
+    };
+</script>    
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jk-vadOR5ZWLZjhSrCzK_J2McxzbqNM&callback=initMap">
 </script>
