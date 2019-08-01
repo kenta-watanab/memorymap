@@ -10,7 +10,7 @@
     <link rel="icon" href="image/icon16.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="image/icon.png">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/memorymap/public/fontawesome/css/all.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.css" media="all">
     @yield('css')
 </HEAD>
 
@@ -36,17 +36,17 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="/home" class="nav-link">
+                        <a href="home" class="nav-link">
                             マップを見る<i class="fas fa-angle-right"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/torokuGamen" class="nav-link">
+                        <a href="torokuGamen" class="nav-link">
                             思い出を増やす<i class="fas fa-angle-right"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/ichiranGamen" class="nav-link">
+                        <a href="ichiranGamen" class="nav-link">
                             思い出を振り返る<i class="fas fa-angle-right"></i>
                         </a>
                     </li>
