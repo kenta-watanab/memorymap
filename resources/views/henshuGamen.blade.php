@@ -7,7 +7,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="b_container">
     <div class="inline">
         <form action="/memorymap/public/updateInfo" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
@@ -25,7 +25,7 @@
             <p class="label">写真</p>
             <input type="file" name="file" id="file" class="in" /><br>
 
-            <input type="submit" value="修正" class="btn">
+            <input type="submit" value="&#xf044; 修正" class="btn fas fa-edit">
         </form>
 
         <!-- 戻るボタンの設定 -->

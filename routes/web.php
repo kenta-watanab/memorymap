@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/', 'MemoryMapController@toLogin');
+
 Route::get('/torokuGamen', 'MemoryMapController@torokuGamen');
 
 Route::get('/ichiranGamen', 'MemoryMapController@ichiranGamen');
