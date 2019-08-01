@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', 'MemoryMapController@toLogin');
-
 Route::get('/torokuGamen', 'MemoryMapController@torokuGamen');
 
 Route::get('/ichiranGamen', 'MemoryMapController@ichiranGamen');
@@ -32,3 +30,8 @@ Auth::routes();
 /*Route::get('/home', 'HomeController@index')->name('home');*/
 
 Route::get('/home','MemoryMapController@displayMap');
+
+Route::get('/', function () {
+    // redirect関数にパスを指定する方法
+    return redirect('/login');
+});
