@@ -9,7 +9,7 @@
 
 <div class="b_container">
     <div class="inline">
-        <form action="/memorymap/public/updateInfo" method="POST" enctype="multipart/form-data">
+        <form action="/updateInfo" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
 
             <h3>{{ $data[0]['place_name'] }}</h3>
@@ -30,7 +30,7 @@
 
         <!-- 戻るボタンの設定 -->
         <script>
-            var url = "/memorymap/public/shosaiGamen/" + {
+            var url = "/shosaiGamen/" + {
                 {
                     $data[0]['id']
                 }
