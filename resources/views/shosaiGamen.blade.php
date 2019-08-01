@@ -1,7 +1,7 @@
 @extends('layouts.header')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="/memorymap/public/css/shosaiGamen.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/shosaiGamen.css" media="all">
 <link rel="stylesheet" type="text/css" href="../css/header.css" media="all">
 @endsection
 
@@ -28,13 +28,13 @@
 
     </div>
 
-    <form action="/memorymap/public/henshuGamen" method="POST">
+    <form action="henshuGamen" method="POST">
         {{ csrf_field() }}
         <input type="text" value={{ $data[0]['id'] }} name="id" class="hidden" />
         <input type="submit" value="&#xf044; 編集" class="btn fas fa-edit">
     </form>
 
-    <form action="/memorymap/public/deleteInfo" method="POST">
+    <form action="deleteInfo" method="POST">
         {{ csrf_field() }}
         <input type="text" value={{ $data[0]['id'] }} name="id" class="hidden" />
         <input type="submit" value="&#xf2ed; 削除" class="deletebtn marginbottom fas fa-trash-alt">
