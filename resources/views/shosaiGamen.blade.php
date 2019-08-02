@@ -28,13 +28,13 @@
 
     </div>
 
-    <form action="henshuGamen" method="POST">
+    <form action="/henshuGamen" method="POST">
         {{ csrf_field() }}
         <input type="text" value={{ $data[0]['id'] }} name="id" class="hidden" />
         <input type="submit" value="&#xf044; 編集" class="btn fas fa-edit">
     </form>
 
-    <form action="deleteInfo" method="POST">
+    <form action="/deleteInfo" method="POST">
         {{ csrf_field() }}
         <input type="text" value={{ $data[0]['id'] }} name="id" class="hidden" />
         <input type="submit" value="&#xf2ed; 削除" class="deletebtn marginbottom fas fa-trash-alt">
