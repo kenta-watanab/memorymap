@@ -125,7 +125,7 @@ class MemoryMapController extends Controller
         
         for ($cnt = 0; $cnt < $array_count; $cnt++){
 
-            $path = "/memorymap/public/image/noimage.png";
+            $path = "/image/noimage.png";
             if ($data[$cnt]['file_name'] != null){
                 $path = Storage::disk('s3')->url($data[$cnt]['file_name']);
             }
@@ -143,7 +143,7 @@ class MemoryMapController extends Controller
         $data = gaishutsu_kiroku::where('id', $id)->get();
         $file_name = $data[0]['file_name'];
      
-        $path = "/memorymap/public/image/noimage.png";
+        $path = "/image/noimage.png";
         if ($file_name != null){
         $path = Storage::disk('s3')->url($data[0]['file_name']);
         }
