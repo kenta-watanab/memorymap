@@ -169,7 +169,9 @@ class MemoryMapController extends Controller
     public function updateInfo(Request $request){
     
          $file = $request->file('file');
-         $path = Storage::disk('s3')->putFile('/picture', $file, 'public');
+         if ($file != null){
+            $path = Storage::disk('s3')->putFile('/picture', $file, 'public');
+         }
 
          $id = $request->input('id');
          $com = $request->input('com');
