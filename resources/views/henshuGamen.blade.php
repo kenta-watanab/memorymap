@@ -1,4 +1,4 @@
-@extends('layouts.headerHenshu')
+@extends('layouts.header')
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="css/insertInfo.css" media="all">
