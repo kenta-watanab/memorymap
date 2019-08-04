@@ -27,7 +27,7 @@
     </script>
     @endif
 
-    <form action="insertInfo" method="POST" enctype="multipart/form-data">
+    <form action="/insertInfo" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
         <p class="label">出かけた場所</p>
         <input placeholder="例）東京スカイツリー" name="name" id="name" class="in" /><br>
