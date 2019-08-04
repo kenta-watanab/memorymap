@@ -115,7 +115,8 @@ class MemoryMapController extends Controller
         $userid = Auth::id();
      
         //インスタンス化
-        $data = gaishutsu_kiroku::where('user_id', $userid)->get();
+        $data = gaishutsu_kiroku::where('user_id', $userid)
+        ->orderBy('place_date', 'asc')->get();
 
         $array_count = count($data);
 
