@@ -1,4 +1,4 @@
-@extends('layouts.header2')
+@extends('layouts.header')
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="/css/shosaiGamen.css" media="all">
