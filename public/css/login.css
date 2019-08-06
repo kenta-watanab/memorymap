@@ -52,6 +52,7 @@ figure {
 }
 
 h1 {
+  text-align: left;
   grid-row: title;
   color: white;
   font-size: 30px;
