@@ -69,6 +69,8 @@
 
     @yield('content')
 
+
+<footer>© MemoryMap</footer>
 </BODY>
 
 </HTML>
