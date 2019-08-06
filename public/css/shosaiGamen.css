@@ -4,7 +4,6 @@ html {
 
 body {
   height: 100%;
-  background-color: #FFF;
   font-weight: bold;
 }
 
@@ -30,7 +29,7 @@ h3 {
   padding: 10px;
   margin: auto;
   margin-top: 10px;
-  background-color: ghostwhite;
+  background-color: lightgray;
   font-weight: bold;
 }
 

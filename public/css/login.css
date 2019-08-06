@@ -19,11 +19,14 @@ img {
   height: auto;
 }
 
+
+
 body {
+  background-color: lightgray;
   text-align: center;
   display: grid;
   grid-template-columns: 20px 1fr 20px;
-  grid-template-rows: [head] 50px [title]auto [sub]auto [login-form]auto [foot]auto;
+  grid-template-rows: [head] 50px [title]auto [sub]auto [login-form]auto [appl-image]auto [foot]auto;
   font-family: sans-serif;
 }
 
@@ -46,7 +49,7 @@ nav {
 figure {
   grid-column: 1 / -1;
   grid-row: title / span 2;
-  height: 500px object-fit: cover;
+  object-fit: cover;
   vertical-align: bottom;
   z-index: -1;
 }
@@ -62,21 +65,44 @@ h1 {
   padding: 10px;
 }
 
+h3{
+  margin-top: 40px; 
+}
+
 p {
   grid-row: sub;
   color: antiquewhite;
   text-align: left;
 }
 
-section {
+#form-erea {
   grid-row: login-form;
+}
+
+section {
+  grid-row: appl-image;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 30px;
+  gap: 20px 30px;
+}
+
+section h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top:10px;
+}
+
+section img {
+  width: 100%;
+  border-radius: 20px;
 }
 
 footer {
   grid-row: foot;
 }
 
-.form-check{
+.form-check {
   margin: 10px;
 }
 
@@ -84,8 +110,8 @@ footer {
   display: inline-block;
 }
 
-.new-btn-outer{
-display: inline-block;
+.new-btn-outer {
+  display: inline-block;
 }
 
 .new-btn {
@@ -106,4 +132,103 @@ display: inline-block;
   color: blue;
 }
 
+@media(min-width:768px) {
+  body {
+    background-color: lightgray;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 0.2fr repeat(6,1fr) 0.2fr;
+    grid-template-rows: [head] 50px [title]auto [sub]auto [login-form]auto [appl-image]auto [foot]auto;
+    font-family: sans-serif;
+    grid-column-gap: 5%;
+    column-gap: 5%;
+  }
+  body>* {
+    grid-column: 2 / -2;
+  }
+  header {
+    grid-row: head;
+  }
+  header span {
+    color: red;
+  }
+  nav {
+    grid-row: head;
+  }
+
+  figure {
+    grid-column: 1 / -1;
+    grid-row: title / span 2;
+    object-fit: cover;
+    vertical-align: bottom;
+    z-index: -1;
+    margin-top: -20%;
+  }
+
+  h1 {
+    text-align: left;
+    grid-row: title;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-shadow: 10px 10px 10px #444444;
+    padding: 100px;
+    grid-column: 2 / span 3;
+    line-height: 80px;
+  }
+  p {
+    grid-row: sub;
+    color: antiquewhite;
+    text-align: left;
+    font-size: 30px;
+  }
+  #form-erea {
+    grid-row: login-form;
+  }
+  section {
+    grid-row: appl-image;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 20px;
+    column-gap: 20px;
+  }
+  section h2 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  section img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  footer {
+    grid-row: foot;
+  }
+  .form-check {
+    margin: 10px;
+  }
+  .login-btn {
+    display: inline-block;
+  }
+  .new-btn-outer {
+    display: inline-block;
+  }
+  .new-btn {
+    border-radius: 5px;
+    width: auto;
+  }
+  .forget_outer {
+    margin: 10px;
+  }
+  .forget {
+    text-decoration: none;
+    color: black;
+  }
+  .forget:hover {
+    color: blue;
+  }
+
+  .input{
+    margin: auto;
+    width: 50%;
+  }
 }

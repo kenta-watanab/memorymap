@@ -26,13 +26,11 @@
 
 <p>Let's make memories map</p>
 
-<section>
+<div id="form-erea">
 
     <form method="POST" action="{{ route('login') }}" class='form'>
 
         @csrf
-
-        <article>
 
             <label for="email" class="col-md-4 col-form-label">{{ __('E-Mail Address') }}</label>
             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} input" name="email" value="{{ old('email') }}" required autofocus>
@@ -42,10 +40,6 @@
                 <strong>{{ $errors->first('email') }}</strong>
             </span>
             @endif
-
-        </article>
-
-        <article>
 
             <label for="password" class="col-md-4 col-form-label">{{ __('Password') }}</label>
             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} input" name="password" required>
@@ -58,14 +52,10 @@
 
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                <label class="form-check-label input" for="remember">
+                <label class="form-check-label" for="remember">
                     {{ __('Remember Me') }}
                 </label>
             </div>
-
-        </article>
-
-        <article>
 
             <div class="btn-erea">
 
@@ -78,7 +68,7 @@
 
                 <div class="new-btn-outer">
 
-                    <div class="nav-link btn-info new-btn" href="{{ route('register') }}">{{ __('新規ID作成') }}</div>
+                    <a class="nav-link btn-info new-btn" href="{{ route('register') }}">{{ __('新規ID作成') }}</a>
 
                 </div>
 
@@ -92,9 +82,27 @@
             </div>
             @endif
 
-        </article>
-
     </form>
+    <h3>思い出を地図に記録できるアプリケーションです</h3>
+</div>
+
+<section>
+    <article>
+        <img src="image/japanmap.png" alt="">
+        <h2>地図に思い出を表示</h2>
+    </article>
+    <article>
+        <img src="image/tokyomap.png" alt="">
+        <h2>地図で思い出を確認</h2>
+    </article>
+    <article>
+        <img src="image/ichiran.png" alt="">
+        <h2>思い出を振り返ろう</h2>
+    </article>
+    <article>
+        <img src="image/shosai.png" alt="">
+        <h2>思い出がよみがえる</h2>
+    </article>
 </section>
 
 @endsection
