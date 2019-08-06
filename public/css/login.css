@@ -1,38 +1,108 @@
-html {
-  height: 100%;
+@charset "UTF-8";
+* {
+  margin: 0;
 }
 
-h1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: bolder;
-  text-shadow: 5px 5px 8px white
+.head_title a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
 }
 
-span {
+.head_title span {
   color: red;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 body {
-  background-image: url("../image/mapb.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.form {
-  width: 60%;
-  margin: auto;
   text-align: center;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: [head] 50px [title]auto [sub]auto [login-form]auto [foot]auto;
+  font-family: sans-serif;
 }
 
-.input {
-  margin-bottom: 15px;
+body>* {
+  grid-column: 2 / -2;
 }
 
-.newBtn {
+header {
+  grid-row: head;
+}
+
+header span {
+  color: red;
+}
+
+nav {
+  grid-row: head;
+}
+
+figure {
+  grid-column: 1 / -1;
+  grid-row: title / span 2;
+  height: 500px object-fit: cover;
+  vertical-align: bottom;
+  z-index: -1;
+}
+
+h1 {
+  grid-row: title;
   color: white;
-  width: 110px;
-  margin: 10px auto auto auto;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: 0 0 5px #444444;
+  padding: 10px;
+}
+
+p {
+  grid-row: sub;
+  color: antiquewhite;
+  text-align: left;
+}
+
+section {
+  grid-row: login-form;
+}
+
+footer {
+  grid-row: foot;
+}
+
+.form-check{
+  margin: 10px;
+}
+
+.login-btn {
+  display: inline-block;
+}
+
+.new-btn-outer{
+display: inline-block;
+}
+
+.new-btn {
   border-radius: 5px;
+  width: auto;
+}
+
+.forget_outer {
+  margin: 10px;
+}
+
+.forget {
+  text-decoration: none;
+  color: black;
+}
+
+.forget:hover {
+  color: blue;
+}
+
 }
