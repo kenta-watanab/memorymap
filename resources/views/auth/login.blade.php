@@ -22,7 +22,7 @@
     <img src="/image/image.jpg" alt="思い出の写真">
 </figure>
 
-<h1>作ろう<br>あなただけの思い出地図</h1>
+<h1>作ろう<br>あなただけの<br>思い出の地図</h1>
 
 <p>Let's make memories map</p>
 
