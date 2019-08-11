@@ -19,7 +19,7 @@
             <p class="label">コメント</p>
             <input id="com" class="in" value={{ $data[0]['place_comment'] }} name="com" /><br>
 
-            <p class="label">出かけた日</p>
+            <p class="label">日付</p>
             <input type="date" id="date" class="in" value={{ $data[0]['place_date'] }} name="date" /><br>
 
             <p class="label">写真</p>

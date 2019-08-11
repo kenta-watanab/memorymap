@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/kiyaku','MemoryMapController@kiyaku');
+
+Route::get('/policy','MemoryMapController@policy');
 
 Route::get('/torokuGamen', 'MemoryMapController@torokuGamen');
 
@@ -32,6 +35,6 @@ Auth::routes();
 Route::get('/home','MemoryMapController@displayMap');
 
 Route::get('/', function () {
-    // redirectŠÖ”‚ÉƒpƒX‚ğw’è‚·‚é•û–@
+    // redirectï¿½Öï¿½ï¿½Éƒpï¿½Xï¿½ï¿½ï¿½wï¿½è‚·ï¿½ï¿½ï¿½ï¿½@
     return redirect('/login');
 });

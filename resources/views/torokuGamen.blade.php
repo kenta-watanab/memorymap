@@ -29,7 +29,7 @@
 
     <form action="/insertInfo" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
-        <p class="label">出かけた場所</p>
+        <p class="label">場所</p>
         <input placeholder="例）東京スカイツリー" name="name" id="name" class="in" /><br>
 
         <input type="button" onClick="attrLatLngFromAddress()" value="&#xf689; 検索" class="btn fas">
@@ -45,7 +45,7 @@
         <p class="label">コメント</p>
         <input placeholder="コメントを記入して下さい" name="com" class="in" /><br>
 
-        <p class="label">出かけた日</p>
+        <p class="label">日付</p>
         <input type="date" name="date" class="in" /><br>
 
         <p class="label">写真</p>
@@ -54,6 +54,8 @@
         <input type="submit" value="&#xf152; 送信" class="btn marginbottom far">
 
     </form>
+
+    <p class="foot">©MemoryMap</p>
 
 </div>
 

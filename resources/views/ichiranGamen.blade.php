@@ -50,6 +50,7 @@
           }
 
         </script>
+<p class="foot">©MemryMap</p>
 </div>
 
 @endsection
