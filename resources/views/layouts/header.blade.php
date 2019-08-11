@@ -35,6 +35,12 @@
                 </ul>
 
                 <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a href="https://www.tec-engineer.com/memorymap%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9/" target="_blank" class="nav-link">
+                            使い方<i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="/home" class="nav-link">
                             マップを見る<i class="fas fa-angle-right"></i>
@@ -48,6 +54,16 @@
                     <li class="nav-item">
                         <a href="/ichiranGamen" class="nav-link">
                             思い出を振り返る<i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/kiyaku" class="nav-link">
+                            利用規約<i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/policy" class="nav-link">
+                            プライバシーポリシー<i class="fas fa-angle-right"></i>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -69,8 +85,6 @@
 
     @yield('content')
 
-
-<footer>© MemoryMap</footer>
 </BODY>
 
 </HTML>

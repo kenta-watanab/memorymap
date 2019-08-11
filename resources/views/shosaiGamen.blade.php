@@ -20,7 +20,7 @@
 
     <div id="info">
 
-        <div class="title">出かけた日</div>
+        <div class="title">日付</div>
         <div class="naiyo">{{ $data[0]['place_date'] }}</div>
 
         <div class="title">コメント</div>
@@ -39,6 +39,9 @@
         <input type="text" value={{ $data[0]['id'] }} name="id" class="hidden" />
         <input type="submit" value="&#xf2ed; 削除" class="deletebtn marginbottom fas fa-trash-alt">
     </form>
+
+    <p class="foot">©MemoryMap</p>
+
 </div>
 
 <script>
